@@ -2,106 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Singh Unique - Web Developer & Designer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Singh Unique">
-  <meta name="description" content="Personal Portfolio of Singh Unique, a Web Developer and Creative Designer.">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/vendor.css">
-  <link rel="stylesheet" href="fonts/icomoon/icomoon.css">
-  <link rel="stylesheet" href="style.css">
+  <title>Singh Unique | Web Developer & Designer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #111;
+      color: #eee;
+      line-height: 1.6;
+    }
+    header {
+      background: #222;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #eee;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .portfolio-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .portfolio-items div {
+      background: #333;
+      padding: 20px;
+      border-radius: 10px;
+      width: 280px;
+      text-align: center;
+    }
+    .portfolio-items img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      background: #ff5722;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #e64a19;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      margin-top: 50px;
+    }
+    .social a {
+      margin: 0 10px;
+      color: #ff5722;
+      text-decoration: none;
+    }
+  </style>
 </head>
+<body>
 
-<body class="bg-black">
-
-<!-- Preloader -->
-<div class="preloader">
-  <svg>
-    <g><path d="M 50,100 A 1,1 0 0 1 50,0"/></g>
-    <defs>
-      <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" style="stop-color:#FF56A1;" />
-        <stop offset="100%" style="stop-color:#FF9350;" />
-      </linearGradient>
-    </defs>
-  </svg>
-</div>
-
-<!-- Navigation -->
-<header id="header" class="light">
-  <div id="header-wrap">
-    <nav id="navbar">
-      <div class="main-logo">
-        <a href="index.html">SinghUnique</a>
-      </div>
-      <div class="action-menu">
-        <input id="menu-toggle" type="checkbox" />
-        <label class="menu-btn" for="menu-toggle">
-          <span></span>
-        </label>
-      </div>
-    </nav>
-  </div>
+<header>
+  <h1>Singh Unique</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#portfolio">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<!-- Hero Billboard -->
-<div id="billboard">
-  <div class="container text-center">
-    <h1 class="section-title">Hi, I'm <strong>Singh Unique</strong></h1>
-    <span class="designation typewrite" data-period="500" data-type='[ "a Web Developer", "a Creative Designer", "a Tech Enthusiast" ]'></span>
-    <p class="pt-3">I design and develop clean, modern, and interactive websites.</p>
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hello! I'm <strong>Singh Unique</strong>, a passionate web developer and creative designer. I craft visually appealing and functional websites using modern technologies like HTML, CSS, JavaScript, and frameworks. I'm committed to building clean, responsive, and interactive web experiences.</p>
+</section>
 
-    <div class="button-container d-flex justify-content-center mt-5">
-      <a href="#portfolio" class="btn btn-pill btn-large btn-outline-light mr-3">View Portfolio</a>
-      <a href="#contact" class="btn btn-pill btn-large btn-outline-light">Contact Me</a>
+<section id="portfolio">
+  <h2>My Projects</h2>
+  <div class="portfolio-items">
+    <div>
+      <img src="https://via.placeholder.com/280x180" alt="Project 1">
+      <h3>Project Title 1</h3>
+      <p>Short description of the project.</p>
     </div>
-
-    <div class="social-links mt-4">
-      <ul class="list-unstyled d-flex justify-content-center">
-        <li class="mr-3"><a href="#"><i class="icon icon-facebook"></i></a></li>
-        <li class="mr-3"><a href="#"><i class="icon icon-instagram"></i></a></li>
-        <li class="mr-3"><a href="#"><i class="icon icon-github"></i></a></li>
-      </ul>
+    <div>
+      <img src="https://via.placeholder.com/280x180" alt="Project 2">
+      <h3>Project Title 2</h3>
+      <p>Short description of the project.</p>
     </div>
-  </div>
-</div>
-
-<!-- Portfolio Section -->
-<section id="portfolio" class="portfolio-wrap padding-medium light">
-  <div class="container text-center">
-    <h2 class="section-title mb-5">My Projects</h2>
-    <div class="portfolio-container d-flex flex-wrap justify-content-center">
-      <div>
-        <img src="images/project1.jpg" alt="Project 1" class="galleryImg">
-        <p class="mt-2">E-Commerce Website</p>
-      </div>
-      <div>
-        <img src="images/project2.jpg" alt="Project 2" class="galleryImg">
-        <p class="mt-2">Portfolio Website</p>
-      </div>
-      <div>
-        <img src="images/project3.jpg" alt="Project 3" class="galleryImg">
-        <p class="mt-2">Blog Platform</p>
-      </div>
+    <div>
+      <img src="https://via.placeholder.com/280x180" alt="Project 3">
+      <h3>Project Title 3</h3>
+      <p>Short description of the project.</p>
     </div>
   </div>
 </section>
 
-<!-- About Section -->
-<section class="about-us bg-grey light padding-xlarge">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-title mb-5">About Me</h2>
-      <p>Hello! I'm Singh Unique, a passionate web developer and designer from India. I create responsive, interactive, and aesthetically pleasing websites using modern web technologies.</p>
-      <p>My areas of interest include front-end development, UI/UX design, and project management. I am always eager to learn new tools and frameworks to enhance my skillset.</p>
-    </div>
-  </div>
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="padding-xlarge bg-black light">
-  <div class="container text-center">
-    <h2 class="section-title mb-5">Contact Me</h2>
-    <form action="contact.php" class="contact-form d-flex flex-wrap justify-content-center">
-      <input type="text" name="name" placeholder="Your Name" class="mb-3" required>
-      <input type="email" name="email" placeholder="Your Email" class="mb-3" r
+<footer>
+  <p>&copy; 2025 Singh Unique. All Rights Reserved.</p>
+  <div class="social">
+    <a href="#">Facebook</a> |
+    <a href="#">Instagram</a> |
+    <a href="#">GitHub</a>
+  </div>
+</footer>
+
+</body>
+</html>
