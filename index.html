@@ -5,10 +5,11 @@
   <title>Harsimran Singh | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
- 
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #1f1c2c, #928DAB);
@@ -35,7 +36,7 @@
     }
 
     nav {
-      background-color: #000000;
+      background-color: #000;
       text-align: center;
       padding: 15px;
       box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
@@ -79,12 +80,13 @@
       padding: 20px;
       margin: 20px 0;
       border-radius: 10px;
-      transition: all 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
     }
 
     .project-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 4px 20px rgba(0, 204, 255, 0.4);
+      border-color: #ffd700;
     }
 
     .project-card h3 {
@@ -105,6 +107,12 @@
       background: #000;
       color: #aaa;
       margin-top: 40px;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff; }
+      to   { text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700; }
     }
 
     @media (max-width: 600px) {
@@ -120,36 +128,26 @@
     }
   </style>
 </head>
+
 <body>
 
   <header data-aos="fade-down">
     <img src="profile.jpg" alt="Harsimran Singh" />
-    <h1>Harsimran Singh</h1>
+    <h1 id="typed-text"></h1>
     <p>Computer Science Student | Gisma University of Applied Sciences</p>
   </header>
 
   <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
     <a href="harsimrancv.pdf" target="_blank">My CV</a>
-    <a href="main.tex" target="_blank">CV LaTeX Source</a>
-    <a href="project_report.pdf" target="_blank">Project Report</a>
   </nav>
 
   <main>
-    <section data-aos="fade-up">
-      <h2>👋 Welcome</h2>
-      <p>Hello! I'm <strong>Harsimran Singh</strong>, a Computer Science student at Gisma University. This site highlights my academic work, technical projects, and CV.</p>
-    </section>
-
     <section id="about" data-aos="fade-up">
-  <h2>👨‍💻 About Me</h2>
-  <p>Hello! I'm <strong>Harsimran Singh</strong>, a passionate Computer Science student at <strong>Gisma University of Applied Sciences</strong>, currently exploring the dynamic world of software development and data-driven applications. I believe in continuous learning, creativity, and using technology to solve real-world problems.</p>
-  
-  <p>My areas of interest include Python programming, software engineering, and mobile app development. I'm particularly enthusiastic about building tools and applications that improve people's lives, whether it's a simple calculator, data management tool, or a mobile app.</p>
-  
-  <p>Beyond academics, I enjoy working on side projects, contributing to open-source repositories, and staying updated with the latest trends in technology and innovation. I'm always eager to learn new skills, collaborate with like-minded individuals, and take on challenges that push my limits.</p>
-
-  <p>If you’re interested in working together, feel free to reach out — I’d love to connect!</p>
-</section>  
+      <h2>👨‍💻 About Me</h2>
+      <p>Hello! I'm <strong>Harsimran Singh</strong>, a passionate Computer Science student at <strong>Gisma University of Applied Sciences</strong>, exploring the dynamic world of software development, games and data-driven applications.</p>
+    </section>
 
     <section id="projects" data-aos="fade-up">
       <h2>💻 Featured Projects</h2>
@@ -161,9 +159,15 @@
       </div>
 
       <div class="project-card">
-        <h3>🧮 Brick vs ball game </h3>
-        <p>a basic game developed by me using pychram and gdeveloper.</p>
-         <p><a href="" target="_blank">Download APK</a></p>
+        <h3>🎮 Brick vs Ball Game</h3>
+        <p>A fun arcade-style game built with Python and GDevelop.</p>
+        <p><a href="brick_vs_ball.apk" target="_blank">Download APK</a></p>
+      </div>
+
+      <div class="project-card">
+        <h3>🏃 HS Run</h3>
+        <p>A Temple Run-inspired game developed using Python and GDevelop.</p>
+        <p><a href="HS_run.apk" target="_blank">Download APK</a></p>
       </div>
     </section>
 
@@ -178,10 +182,17 @@
     <p>&copy; 2025 Harsimran Singh | All rights reserved.</p>
   </footer>
 
-
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000, once: true });
+
+    const text = "Hi, I'm Harsimran Singh";
+    let i = 0;
+    function type() {
+      document.getElementById("typed-text").textContent = text.slice(0, i++);
+      if (i <= text.length) setTimeout(type, 150);
+    }
+    type();
   </script>
 </body>
 </html>
