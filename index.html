@@ -1,83 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title> Harsimran singh| Computer Science Lab B201A Portfolio</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #000080;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            text-align: center;
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #0066cc;
-            font-weight: bold;
-        }
-        main {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-        }
-        footer {
-            text-align: center;
-            margin: 30px 0;
-            color: #777;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harsimran Singh | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    nav {
+      background: #1abc9c;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: #2c3e50;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #1abc9c;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1abc9c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contact a {
+      color: #1abc9c;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2c3e50;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Harsimran Singh</h1>
-    <p>Computer Science Lab B201A Portfolio Website</p>
-</header>
+  <nav>
+    <div><strong>Harsimran Singh</strong></div>
+    <div>
+      <a href="#projects">Projects</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-<nav>
-    <a href="harsimrancv.pdf" target="_blank"> My CV </a> 
-    <a href="main.tex" target="_blank"> CV Latex Source Code</a>
-    <a href="project_report.pdf" target="_blank"> Project Report</a>
+  <section class="hero">
+    <h1>Hello, I'm Harsimran Singh</h1>
+    <p>Computer Science Student | Open-source Enthusiast | Tech Explorer</p>
+  </section>
 
-</nav>
+  <section id="projects" class="section">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio to showcase my work, resume and skills — hosted on GitHub Pages.</p>
+        <a href="https://singhunique.github.io/" target="_blank">Visit Site</a>
+      </div>
+      <div class="card">
+        <h3>Calculator App</h3>
+        <p>A simple calculator built using Python and PyCharm IDE as a GUI project.</p>
+      </div>
+    </div>
+  </section>
 
-<main>
-    <section>
-        <h2>Welcome to my portfolio!</h2>
-        <p>Hello! I'm <strong>Harsimran Singh</strong>, a computer science student at Gisma University of Applied Sciences. This is my personal portfolio website showcasing my projects, technical exercises, and CV created using LaTeX.</p>
-    </section>
+  <section id="cv" class="section">
+    <h2>My CV</h2>
+    <p style="text-align:center;">Download or view my latest CV below:</p>
+    <a href="cv/harsimran.pdf" target="_blank" style="display:block;text-align:center;margin:10px;font-size:1.2rem;color:#1abc9c;">📥 Download CV (PDF)</a>
+    <iframe src="cv/harsimran.pdf"></iframe>
+  </section>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <ul>
-            <li><strong>Project Title:</strong> Collecting and storing user data — <a href="project2.py"target="_blank">Download</a></li>
-        </ul>
-    </section>
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <div class="contact">
+      <a href="https://github.com/singhunique" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:singhharsimran2906@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
 
-    <section>
-        <h2>Contact</h2>
-        <p>Email:singhharsimran2906@gnail.com</p>
-        <p>GitHub: <a href="https://github.com/singhunique" target="_blank">github.com/singhunique</a></p>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2025 Harsimran singh | All rights reserved.</p>
-</footer>
+  <footer>
+    &copy; 2025 Harsimran Singh | Powered by GitHub Pages
+  </footer>
 
 </body>
 </html>
