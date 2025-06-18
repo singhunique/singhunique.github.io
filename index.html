@@ -1,141 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Harsimran Singh | Computer Science Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1c1c1c;
-            color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <title>Harsimran Singh | Computer Science Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- AOS Animation Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
 
-        header {
-            background-color: #000080;
-            color: white;
-            padding: 40px 20px 20px;
-            text-align: center;
-        }
+    header {
+      background: #000080;
+      color: white;
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
 
-        header img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border: 4px solid #fff;
-            margin-bottom: 15px;
-        }
+    header img {
+      border-radius: 50%;
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 15px;
+    }
 
-        nav {
-            background-color: #111;
-            text-align: center;
-            padding: 15px;
-        }
+    nav {
+      background-color: #111;
+      text-align: center;
+      padding: 15px;
+    }
 
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #90caf9;
-            font-weight: bold;
-        }
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #00ccff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+    nav a:hover {
+      color: #ffd700;
+    }
 
-        main {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 30px;
-            background: #2c2c2c;
-            border-radius: 10px;
-        }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
 
-        h2 {
-            color: #90caf9;
-            border-bottom: 1px solid #444;
-            padding-bottom: 5px;
-        }
+    h2 {
+      color: #ffd700;
+      border-bottom: 2px solid #444;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
 
-        ul {
-            padding-left: 20px;
-        }
+    ul {
+      padding-left: 20px;
+    }
 
-        .project-card {
-            background: #333;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 10px 0;
-        }
+    .project-card {
+      background: #1f1f1f;
+      border-left: 4px solid #00ccff;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-        .project-card a {
-            color: #ffcc66;
-        }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 204, 255, 0.3);
+    }
 
-        .contact-info p {
-            margin: 8px 0;
-        }
+    .project-card a {
+      color: #90caf9;
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #000;
-            color: #888;
-            margin-top: 40px;
-        }
+    .contact-info p {
+      margin: 8px 0;
+    }
 
-        @media (max-width: 600px) {
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-        }
-    </style>
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: #888;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      header img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <img src="profile.jpg" alt="Harsimran Singh">
+  <header data-aos="fade-down">
+    <img src="profile.jpg" alt="Harsimran Singh" />
     <h1>Harsimran Singh</h1>
     <p>Computer Science Lab B201A Portfolio Website</p>
-</header>
+  </header>
 
-<nav>
+  <nav>
     <a href="harsimrancv.pdf" target="_blank">My CV</a>
     <a href="main.tex" target="_blank">CV LaTeX Source</a>
     <a href="project_report.pdf" target="_blank">Project Report</a>
-</nav>
+  </nav>
 
-<main>
-    <section>
-        <h2>Welcome to My Portfolio</h2>
-        <p>Hello! I'm <strong>Harsimran Singh</strong>, a computer science student at Gisma University of Applied Sciences. This website showcases my projects, technical exercises, and CV created using LaTeX.</p>
+  <main>
+    <section data-aos="fade-up">
+      <h2>Welcome to My Portfolio</h2>
+      <p>
+        Hello! I'm <strong>Harsimran Singh</strong>, a computer science student at Gisma University of Applied Sciences. This website showcases my projects, technical exercises, and CV created using LaTeX.
+      </p>
     </section>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="project-card">
-            <h3>Collecting and Storing User Data</h3>
-            <p>This Python script demonstrates user input handling and file storage.</p>
-            <p><a href="project2.py" target="_blank">Download Script</a></p>
-        </div>
+    <section id="projects" data-aos="fade-up">
+      <h2>Featured Projects</h2>
+
+      <div class="project-card">
+        <h3>📂 Collecting and Storing User Data</h3>
+        <p>This Python script demonstrates user input handling and file storage.</p>
+        <p><a href="project2.py" target="_blank">Download Script</a></p>
+      </div>
+
+      <div class="project-card">
+        <h3>🧮 Calculator</h3>
+        <p>A basic Python calculator built in PyCharm with a simple CLI interface.</p>
+        <p><a href="https://github.com/singhunique/calculator" target="_blank">View on GitHub</a></p>
+      </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:singhharsimran2906@gmail.com">singhharsimran2906@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/singhunique" target="_blank">github.com/singhunique</a></p>
-        </div>
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact</h2>
+      <div class="contact-info">
+        <p>Email: <a href="mailto:singhharsimran2906@gmail.com">singhharsimran2906@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/singhunique" target="_blank">github.com/singhunique</a></p>
+      </div>
     </section>
-</main>
+  </main>
 
-<footer>
+  <footer>
     <p>&copy; 2025 Harsimran Singh | All rights reserved.</p>
-</footer>
+  </footer>
 
+ 
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
